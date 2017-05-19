@@ -1,0 +1,14 @@
+<p>
+    中英文翻译页面
+</p>
+<div>
+    <h2>{{ 'title' | translate }}</h2>
+    <label>
+      {{ 'hello' | translate }}
+      <select #langSelect (change)="changeLang(langSelect.value)">
+        <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+      </select>
+    </label>
+    <p>{{'content' | translate}}</p>
+</div>
+<button (click)="toggleLang()">{{'get-lang' | translate}}</button>

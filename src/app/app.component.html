@@ -1,0 +1,7 @@
+<h1>
+    {{title}}
+</h1>
+<input type="button" value="跳转到第一个page页面" [routerLink]="['/page1',1]" routerLinkActive="active" /><br/><br/>
+<input type="button" value="跳转到第二个page页面" [routerLink]="['/page2']" routerLinkActive="active" /><br/><br/>
+<input type="button" value="跳转到第三个page页面" [routerLink]="['/page3']" routerLinkActive="active" /><br/><br/>
+<router-outlet></router-outlet>
